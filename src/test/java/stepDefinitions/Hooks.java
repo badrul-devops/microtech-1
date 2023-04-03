@@ -14,8 +14,14 @@ public class Hooks extends Base{
 		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 	     ChromeOptions options = new ChromeOptions();
 	      options.addArguments("--start-maximized");
+		  options.addArguments("--disable-dev-shm-usage");
 	   // Initialize the ChromeDriver with options
 	      WebDriver driver = new ChromeDriver(options);
+
+// 		  ChromeOptions options = new ChromeOptions();
+// options.addArguments("--no-sandbox");
+// options.addArguments("--disable-dev-shm-usage");
+// WebDriver driver = new ChromeDriver(options);
 		 
 		 
 //			ChromeOptions option = new ChromeOptions();
