@@ -45,7 +45,7 @@
         <groupId>io.cucumber</groupId>
         <artifactId>cucumber-gherkin</artifactId>
         <version>7.11.2</version>
-		
+		<scope>test</scope>
     </dependency>
 	<!-- <dependency> 
         <groupId>info.cukes</groupId>
