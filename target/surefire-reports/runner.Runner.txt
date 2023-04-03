@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: runner.Runner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.563 s - in runner.Runner
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.179 s <<< FAILURE! - in runner.Runner
+runner.Runner.initializationError  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.NoClassDefFoundError: io/cucumber/gherkin/GherkinParser
+Caused by: java.lang.ClassNotFoundException: io.cucumber.gherkin.GherkinParser
+

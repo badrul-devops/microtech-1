@@ -1,4 +1,4 @@
-runner\Runner.class
-stepDefinitions\Hooks.class
-stepDefinitions\Login_Functionality_Verification.class
-base\Base.class
+base/Base.class
+stepDefinitions/Login_Functionality_Verification.class
+stepDefinitions/Hooks.class
+runner/Runner.class

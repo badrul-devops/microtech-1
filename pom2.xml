@@ -19,53 +19,48 @@
 	</properties>
 
 	<dependencies>
-    <dependency><!--Selenium Dependency -->
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-java</artifactId>
-        <version>${selenium.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>io.github.bonigarcia</groupId>
-        <artifactId>webdrivermanager</artifactId>
-        <version>${webdrivermanager.version}</version>
-    </dependency> 
-    <dependency><!--cucumber-java Dependencies -->
-        <groupId>io.cucumber</groupId>
-        <artifactId>cucumber-java</artifactId>
-        <version>${cucumber.version}</version>
-        <scope>test</scope>
-    </dependency>
-    <!-- <dependency> 
+		<dependency><!--Selenium Dependency -->
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>${webdrivermanager.version}</version>
+		</dependency> 
+		<dependency><!--cucumber-java Dependencies -->
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>${cucumber.version}</version>
+               <scope>test</scope>
+		</dependency>
+		<dependency><!--cucumber-junit Dependencies -->
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>${cucumber.version}</version>
+			<scope>test</scope>
+		</dependency>
+         <dependency>
         <groupId>io.cucumber</groupId>
         <artifactId>gherkin</artifactId>
-        <version>5.1.0</version>
-    </dependency> -->
-	<dependency> <!--cucumber-core Dependencies -->
-        <groupId>io.cucumber</groupId>
-        <artifactId>cucumber-core</artifactId>
-        <version>1.2.6</version>
-    </dependency>
-    <dependency><!--cucumber-junit Dependencies -->
-        <groupId>io.cucumber</groupId>
-        <artifactId>cucumber-junit</artifactId>
-        <version>${cucumber.version}</version>
+        <version>26.1.0</version>
         <scope>test</scope>
     </dependency>
-    <dependency><!--Allure Cucumber Dependency -->
-        <groupId>io.qameta.allure</groupId>
-        <artifactId>allure-cucumber5-jvm</artifactId>
-        <version>${allure.cucumber5.version}</version>
-        <scope>test</scope>
-    </dependency>
-    <dependency><!--Allure Reporting Dependency -->
-        <groupId>io.qameta.allure</groupId>
-        <artifactId>allure-junit4</artifactId>
-        <version>${allure.junit4.version}</version>
-        <scope>test</scope>
-    </dependency>
-</dependencies>
+		<dependency><!--Allure Cucumber Dependency -->
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-cucumber5-jvm</artifactId>
+			<version>${allure.cucumber5.version}</version>
+		</dependency>
+		<dependency><!--Allure Reporting Dependency -->
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-junit4</artifactId>
+			<version>${allure.junit4.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 
-<build>
+	<build>
     <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -92,8 +87,9 @@
                     <allure.results.directory>${project.basedir}/allure-results</allure.results.directory>
                 </systemPropertyVariables>
                 <argLine>
-                -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-                -Dcucumber.options="--plugin io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm"
+                    -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    -Dcucumber.plugin=io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm
+                    -Djdk.net.URLClassPath.disableClassPathURLCheck=true
                 </argLine>
                 <dependencies>
                     <dependency>
@@ -112,4 +108,5 @@
     </plugins>
 </build>
 
+  
 </project>
