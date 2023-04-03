@@ -25,7 +25,7 @@ public class Hooks extends Base{
 		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 	     ChromeOptions options = new ChromeOptions();
 		 options.addArguments("--remote-allow-any-origin");
-	      options.addArguments("--start-maximized");
+	    options.addArguments("--start-maximized");
 	   // Initialize the ChromeDriver with options
 	      WebDriver driver = new ChromeDriver(options);
 		 
