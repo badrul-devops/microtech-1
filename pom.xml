@@ -19,12 +19,12 @@
 	</properties>
 
 	<dependencies>
-	<dependency>
+	<!-- <dependency>
 		<groupId>org.testng</groupId>
 		<artifactId>testng</artifactId>
 		<version>7.4.0</version>
 		<scope>test</scope>
-	</dependency>
+	</dependency> -->
     <dependency><!--Selenium Dependency -->
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>
